@@ -18,7 +18,7 @@
    ""
    "10000"])
 
-(def input (str/split-lines (slurp (io/resource "input1.txt"))))
+(def input (str/split-lines (slurp (io/resource "d1.txt"))))
 
 (defn sum-elves
   [col]
@@ -38,9 +38,11 @@
    (take n)
    (reduce +)))
 
+;; part 1
 (top 1 (sum-elves example))
-(top 3 (sum-elves example))
-
 (top 1 (sum-elves input))
+
+;; part 2
+(top 3 (sum-elves example))
 (top 3 (sum-elves input))
 
